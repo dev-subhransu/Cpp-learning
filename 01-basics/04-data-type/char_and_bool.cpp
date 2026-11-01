@@ -23,5 +23,28 @@ int main() {
     unsigned char c = 200; //unsigned char can store values from 0 to 255
     cout << (int) c << std::endl;
 
+    /* bool data type is used to store boolean values.
+    It is a 1 byte(8 bits) data type.
+    It can only store the values true or false.
+    */
+    bool pizza_is_good = true;
+    cout << pizza_is_good << std::endl;
+
+    bool is_milk_fresh = false;
+    cout << is_milk_fresh << std::endl;
+
+    //in bool data type 0 is considered as false and any non-zero value is considered as true
+    bool is_sun_rising = 1; //1 is considered as true   
+    bool is_sun_setting = 0; //0 is considered as false
+    cout << is_sun_rising << std::endl;
+    cout << is_sun_setting << std::endl;
+
+    //example of using bool data type with non zero value
+    bool is_raining = 5; //5 is considered as true
+    cout << is_raining << std::endl;
+
+    // usind std::boolalpha to print true or false instead of 1 or 0
+    // boolalpha is a manipulator that can be used to print boolean values as true or false instead of 1 or 0
+    cout << std::boolalpha << is_milk_fresh<< std::endl; //enables boolalpha
     return 0;
 }
