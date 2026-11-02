@@ -32,6 +32,12 @@ int main() {
     cout << complete_str << "\n";
     complete_str.replace(0,5,"Hi");// replace values from a specific index
     cout << complete_str << "\n";
+
+    //String Operation Methods
+    string greetings = "what the hell?";
+    greetings.replace(greetings.find("hell"),4,"****");
+    cout << greetings.substr(5, 2) << "\n"; // extract a substring from the string starting at index 5 with length 2
+    cout << greetings.find_first_of("aeiou") << "\n"; // find the first occurrence of any character in the given set
     return 0;
 
 }
