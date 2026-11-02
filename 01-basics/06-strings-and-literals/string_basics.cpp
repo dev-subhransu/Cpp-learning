@@ -23,5 +23,15 @@ int main() {
     string Istr;
     std::cin >>  Istr;// it has a limitation that it will only read the first word and not the complete line if there are spaces in between
     cout << Istr << "\n";
+
+    //String modifiers methods
+    cout << complete_str.size() << "\n"; // same as length() method
+    cout << complete_str.insert(3," ")<< "\n"; // insert values at a specific index
+    cout << complete_str.erase(3,1) << "\n"; // erase values from a specific index
+    complete_str.pop_back(); // remove the last character
+    cout << complete_str << "\n";
+    complete_str.replace(0,5,"Hi");// replace values from a specific index
+    cout << complete_str << "\n";
     return 0;
+
 }
