@@ -4,6 +4,33 @@
 #include <vector>
 #include <fstream>
 
+void save_score (int guesscount){
+    std::ifstream input("highscore.txt");
+    if (!input.is_open())
+    {
+        std::cout << "Unable to read file \n";
+        return;
+    }
+    
+
+    int highscore;
+    input >> highscore;
+
+    std::ofstream output("highscore.txt");
+    if (!output.is_open())
+    {
+        std::cout << "Unable to read file \n";
+        return;
+    }
+
+    if (guesscount < highscore)
+    {
+        output << guesscount;
+    }else{
+        output << highscore;
+    }
+}
+
 void print_vector(std::vector <int> guesses){
     for (int i = 0; i < guesses.size(); i++)
     {
@@ -34,32 +61,8 @@ void play_game(){
             std::cout << "\nToo high\n";
         }  
     }
+    save_score(count);
     print_vector(guesses);
-    std::ifstream input("highscore.txt");
-    if (!input.is_open())
-    {
-        std::cout << "Unable to read file \n";
-        return;
-    }
-    
-
-    int highscore;
-    input >> highscore;
-
-    std::ofstream output("highscore.txt");
-    if (!output.is_open())
-    {
-        std::cout << "Unable to read file \n";
-        return;
-    }
-
-    if (count < highscore)
-    {
-        output << count;
-    }else{
-        output << highscore;
-    }
-    
 }
 int main() {
     srand(time(NULL));
