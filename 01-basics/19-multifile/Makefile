@@ -8,4 +8,4 @@ main.o: main.cpp utils.h
 	g++ -c main.cpp
 
 clean:
-	del *.o *.exe 
+	del *.o *.exe
